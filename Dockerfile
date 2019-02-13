@@ -1,4 +1,4 @@
-FROM sonatype/nexus3:3.14.0
+FROM sonatype/nexus3:3.15.2
 
 # Switch to a user who can install the plugin
 USER root
