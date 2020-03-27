@@ -1,4 +1,4 @@
-FROM sonatype/nexus3:3.19.1
+FROM sonatype/nexus3:3.21.2
 
 ARG NEXUS3_GITHUB_OAUTH_PLUGIN_VERSION=2.0.2
 
@@ -14,6 +14,9 @@ RUN yum install -y unzip && yum clean all &&\
 
 # Configure the github oauth plugin for our organisation
 RUN echo -e "github.api.url=https://api.github.com\ngithub.principal.cache.ttl=PT1M\ngithub.org=cgi-eoss" >/opt/sonatype/nexus/etc/githuboauth.properties
+
+# Re-enable script control
+RUN echo -e "nexus.scripts.allowCreation=true" >>/opt/sonatype/nexus/etc/nexus.properties
 
 # Switch back to the service user
 USER nexus
