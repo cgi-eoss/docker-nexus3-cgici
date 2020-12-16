@@ -1,4 +1,4 @@
-FROM sonatype/nexus3:3.28.1
+FROM sonatype/nexus3:3.29.0
 
 ARG NEXUS3_GITHUB_OAUTH_PLUGIN_VERSION=3.1.0
 
