@@ -1,4 +1,4 @@
-FROM sonatype/nexus3:3.68.0
+FROM sonatype/nexus3:3.72.0-java17-ubi
 
 ARG NEXUS3_GITHUB_OAUTH_PLUGIN_VERSION=3.1.0
 
